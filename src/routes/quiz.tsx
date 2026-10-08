@@ -26,7 +26,7 @@ function QuizPage() {
   const [showHint, setShowHint] = useState(false);
   const [answers, setAnswers] = useState<boolean[]>([]);
 
-  const q = fractionQuiz[index];
+  const q = fractionQuiz[index]!;
   const correct = selected === q.answer;
 
   const check = () => {

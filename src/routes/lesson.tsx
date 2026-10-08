@@ -36,7 +36,7 @@ function Pizza({ shaded, total }: { shaded: number; total: number }) {
 function LessonPage() {
   const [step, setStep] = useState(0);
   const [speaking, setSpeaking] = useState(false);
-  const card = fractionLesson[step];
+  const card = fractionLesson[step]!;
   const last = step === fractionLesson.length - 1;
 
   const readAloud = () => {

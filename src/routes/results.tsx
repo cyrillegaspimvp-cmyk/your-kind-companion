@@ -8,9 +8,9 @@ type Search = { score: number; total: number; wrong: string };
 
 export const Route = createFileRoute("/results")({
   validateSearch: (s: Record<string, unknown>): Search => ({
-    score: Number(s.score ?? 4),
-    total: Number(s.total ?? 5),
-    wrong: String(s.wrong ?? "3"),
+    score: Number(s["score"] ?? 4),
+    total: Number(s["total"] ?? 5),
+    wrong: String(s["wrong"] ?? "3"),
   }),
   head: () => ({
     meta: [
